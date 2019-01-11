@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 import client from './apolloClient';
 import Home from './Home';
 import Detail from './Detail';
+import GlobalStyled from './globalStyled';
 
 class App extends Component {
   render() {
@@ -12,7 +13,8 @@ class App extends Component {
         <Router>
           <>
             <Route path={'/'} component={Home} exact={true} />
-            <Route path={'/detail/:movieId'} component={Detail} />
+            <Route path={'/details/:movieId'} component={Detail} />
+            <GlobalStyled />
           </>
         </Router>
       </ApolloProvider>
